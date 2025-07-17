@@ -11,60 +11,60 @@
           extend: {
             colors: {
               dark: {
-                900: '#0f0f0f',
-                800: '#1a1a1a',
-                700: '#2d2d2d',
-                600: '#404040',
-                500: '#525252',
-                400: '#737373',
-                300: '#a3a3a3',
-                200: '#d4d4d4',
-                100: '#f5f5f5'
-              }
+                900: "#0f0f0f",
+                800: "#1a1a1a",
+                700: "#2d2d2d",
+                600: "#404040",
+                500: "#525252",
+                400: "#737373",
+                300: "#a3a3a3",
+                200: "#d4d4d4",
+                100: "#f5f5f5",
+              },
             },
             animation: {
-              'fade-in': 'fadeIn 0.5s ease-in-out',
-              'slide-up': 'slideUp 0.3s ease-out',
-              'pulse-glow': 'pulseGlow 2s infinite'
+              "fade-in": "fadeIn 0.5s ease-in-out",
+              "slide-up": "slideUp 0.3s ease-out",
+              "pulse-glow": "pulseGlow 2s infinite",
             },
             keyframes: {
               fadeIn: {
-                '0%': { opacity: '0', transform: 'translateY(10px)' },
-                '100%': { opacity: '1', transform: 'translateY(0)' }
+                "0%": { opacity: "0", transform: "translateY(10px)" },
+                "100%": { opacity: "1", transform: "translateY(0)" },
               },
               slideUp: {
-                '0%': { opacity: '0', transform: 'translateY(20px)' },
-                '100%': { opacity: '1', transform: 'translateY(0)' }
+                "0%": { opacity: "0", transform: "translateY(20px)" },
+                "100%": { opacity: "1", transform: "translateY(0)" },
               },
               pulseGlow: {
-                '0%, 100%': { boxShadow: '0 0 5px rgba(34, 197, 94, 0.5)' },
-                '50%': { boxShadow: '0 0 20px rgba(34, 197, 94, 0.8)' }
-              }
-            }
-          }
-        }
-      }
+                "0%, 100%": { boxShadow: "0 0 5px rgba(34, 197, 94, 0.5)" },
+                "50%": { boxShadow: "0 0 20px rgba(34, 197, 94, 0.8)" },
+              },
+            },
+          },
+        },
+      };
     </script>
     <style>
       body {
         background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
         min-height: 100vh;
       }
-      
+
       .glass-effect {
         background: rgba(45, 45, 45, 0.8);
         backdrop-filter: blur(10px);
         border: 1px solid rgba(64, 64, 64, 0.3);
       }
-      
+
       .input-glow:focus {
         box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.3);
       }
-      
+
       .url-item {
         transition: all 0.3s ease;
       }
-      
+
       .url-item:hover {
         background: rgba(64, 64, 64, 0.3);
         transform: translateX(5px);
@@ -72,33 +72,65 @@
     </style>
   </head>
   <body class="min-h-screen">
-    <div class="min-h-screen w-full flex items-center justify-center p-4 sm:p-6 lg:p-8">
+    <div
+      class="min-h-screen w-full flex items-center justify-center p-4 sm:p-6 lg:p-8"
+    >
       <div class="w-full max-w-2xl animate-fade-in">
-
         <div class="text-center mb-8">
-          <div class="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full mb-4 shadow-lg">
-            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.102m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path>
+          <div
+            class="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full mb-4 shadow-lg"
+          >
+            <svg
+              class="w-8 h-8 text-white"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.102m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"
+              ></path>
             </svg>
           </div>
-          <h1 class="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent mb-2">
+          <h1
+            class="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent mb-2"
+          >
             URL Shortener
           </h1>
-          <p class="text-dark-300 text-lg">Transform long URLs into short, shareable links</p>
+          <p class="text-dark-300 text-lg">
+            Transform long URLs into short, shareable links
+          </p>
         </div>
 
-
-        <div class="glass-effect rounded-2xl shadow-2xl p-6 sm:p-8 lg:p-10 animate-slide-up">
+        <div
+          class="glass-effect rounded-2xl shadow-2xl p-6 sm:p-8 lg:p-10 animate-slide-up"
+        >
           <form class="space-y-6">
-
             <div class="space-y-2">
-              <label for="url" class="block text-sm font-semibold text-dark-200 uppercase tracking-wide">
+              <label
+                for="url"
+                class="block text-sm font-semibold text-dark-200 uppercase tracking-wide"
+              >
                 Original URL
               </label>
               <div class="relative">
-                <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                  <svg class="h-5 w-5 text-dark-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9"></path>
+                <div
+                  class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none"
+                >
+                  <svg
+                    class="h-5 w-5 text-dark-400"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9"
+                    ></path>
                   </svg>
                 </div>
                 <input
@@ -112,14 +144,31 @@
             </div>
 
             <div class="space-y-2">
-              <label for="shortcode" class="block text-sm font-semibold text-dark-200 uppercase tracking-wide">
+              <label
+                for="shortcode"
+                class="block text-sm font-semibold text-dark-200 uppercase tracking-wide"
+              >
                 Custom Short Code
-                <span class="text-dark-400 font-normal normal-case">(optional)</span>
+                <span class="text-dark-400 font-normal normal-case"
+                  >(optional)</span
+                >
               </label>
               <div class="relative">
-                <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                  <svg class="h-5 w-5 text-dark-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 20l4-16m2 16l4-16M6 9h14M4 15h14"></path>
+                <div
+                  class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none"
+                >
+                  <svg
+                    class="h-5 w-5 text-dark-400"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M7 20l4-16m2 16l4-16M6 9h14M4 15h14"
+                    ></path>
                   </svg>
                 </div>
                 <input
@@ -137,8 +186,18 @@
               class="w-full bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-[1.02] hover:shadow-lg active:scale-[0.98] animate-pulse-glow"
             >
               <span class="flex items-center justify-center space-x-2">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                <svg
+                  class="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M13 10V3L4 14h7v7l9-11h-7z"
+                  ></path>
                 </svg>
                 <span>Shorten URL</span>
               </span>
@@ -147,13 +206,26 @@
 
           <div class="mt-8 pt-8 border-t border-dark-600">
             <div class="flex items-center space-x-2 mb-4">
-              <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
+              <svg
+                class="w-5 h-5 text-green-500"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
+                ></path>
               </svg>
-              <h3 class="text-lg font-semibold text-dark-200">Your Shortened URLs</h3>
+              <h3 class="text-lg font-semibold text-dark-200">
+                Your Shortened URLs
+              </h3>
             </div>
-            <ul class="urls space-y-3 max-h-64 overflow-y-auto custom-scrollbar">
-            </ul>
+            <ul
+              class="urls space-y-3 max-h-64 overflow-y-auto custom-scrollbar"
+            ></ul>
           </div>
         </div>
       </div>
@@ -163,17 +235,17 @@
       .custom-scrollbar::-webkit-scrollbar {
         width: 6px;
       }
-      
+
       .custom-scrollbar::-webkit-scrollbar-track {
         background: rgba(64, 64, 64, 0.3);
         border-radius: 3px;
       }
-      
+
       .custom-scrollbar::-webkit-scrollbar-thumb {
         background: rgba(34, 197, 94, 0.6);
         border-radius: 3px;
       }
-      
+
       .custom-scrollbar::-webkit-scrollbar-thumb:hover {
         background: rgba(34, 197, 94, 0.8);
       }
@@ -181,14 +253,14 @@
 
     <script>
       const form = document.querySelector("form");
-      const fetchURL = async() =>{
+      const fetchURL = async () => {
         const res = await fetch("/links");
         const links = await res.json();
         let urlList = document.querySelector(".urls");
         urlList.innerHTML = "";
-        for(const [shortCode, url] of Object.entries(links)){
+        for (const [shortCode, url] of Object.entries(links)) {
           const li = document.createElement("li");
-                    li.innerHTML = `
+          li.innerHTML = `
             <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between space-y-2 sm:space-y-0">
               <div class="flex-1 min-w-0">
                 <a class="text-green-400 hover:text-green-300 font-mono text-sm sm:text-base break-all transition-colors duration-200" 
@@ -199,32 +271,67 @@
                 <p class="text-dark-300 text-xs sm:text-sm mt-1 truncate" title="${url}">
                   → ${url}
                 </p>
-              </div>`
+              </div>
+              <div class="flex space-x-2 flex-shrink-0">
+                <button onclick="copyToClipboard('${window.location.origin}/${shortCode}',event)" 
+                        class="btn bg-dark-700 hover:bg-dark-600 text-dark-200 px-3 py-1 rounded-md text-xs transition-colors duration-200 flex items-center space-x-1">
+                  <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                  </svg>
+                  <span>Copy</span>
+                </button>
+              </div>
+            </div>`;
           urlList.appendChild(li);
         }
-      }
-      form.addEventListener("submit",async(e)=>{
-        e.preventDefault()
-        const formData = new FormData(e.target)
+      };
+      const copyToClipboard = async (text, event) => {
+        try {
+          await navigator.clipboard.writeText(text);
+
+          const button = event.target.closest('button');
+          const originalContent = button.innerHTML;
+
+          button.innerHTML = `
+      <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+      </svg>
+      <span>Copied!</span>
+    `;
+          button.classList.add("bg-green-600");
+
+          setTimeout(() => {
+            button.innerHTML = originalContent;
+            button.classList.remove("bg-green-600");
+          }, 2000);
+        } catch (err) {
+          console.error("Failed to copy: ", err);
+        }
+      };
+
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const formData = new FormData(e.target);
         const url = formData.get("url");
         const shortCode = formData.get("shortcode");
         try {
-          const response = await fetch("/shorten",{
+          const response = await fetch("/shorten", {
             method: "POST",
-            headers : {"content-type":"application/json"},
-            body: JSON.stringify({url, shortCode})
-          })
-          if(response.ok){
+            headers: { "content-type": "application/json" },
+            body: JSON.stringify({ url, shortCode }),
+          });
+          if (response.ok) {
+            e.target.reset();
             fetchURL();
           } else {
-            console.log(response)
+            console.log(response);
             const msg = await response.text();
-            console.log(msg)
+            console.log(msg);
           }
         } catch (error) {
-          console.error(error)
+          console.error(error);
         }
-      })
+      });
     </script>
   </body>
 </html>
